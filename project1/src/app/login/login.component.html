@@ -1,0 +1,46 @@
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+          <form class="box">
+            <div class="field">
+              <figure class="image is-128x128 logo">
+                <img src="./assets/ayilnet-logo1.png">
+              </figure>
+              <h3>Пожалуйста войдите в систему.</h3>
+            </div>
+            <div class="field">
+              <div class="control has-icons-left">
+                <label>
+                  <input [(ngModel)]="email" class="input" name="email" placeholder="ayilnet.kg@gmail.com" type="email">
+                </label>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-envelope"></i>
+                  </span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control has-icons-left">
+                <label>
+                  <input [(ngModel)]="password" class="input" name="password" placeholder="**********" type="password">
+                </label>
+                <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
+              </div>
+            </div>
+            <div class="field is-grouped is-grouped-centered">
+              <button (click)="login()" [disabled]="!isFormValid()" class="button is-success">
+                Войти
+              </button>
+            </div>
+          </form>
+          <div class="has-text-centered">
+            <a (click)="register()">Регистрация</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
